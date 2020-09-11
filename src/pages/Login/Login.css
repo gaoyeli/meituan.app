@@ -1,0 +1,64 @@
+.header {
+    font-size: 0.38rem;
+    color: #fff;
+    height: 0.8rem;
+    background: #ff9900;
+    text-align: center;
+    line-height: 0.8rem;
+    position: relative;
+  }
+  .header span {
+    color: #fff;
+    font-size: 0.38rem;
+  }
+  .header .a {
+    float: right;
+    color: #fff;
+    font-size: 0.38rem;
+    text-decoration: none;
+    position: absolute;
+    right: 0.3rem;
+  }
+  .input {
+    width: 5.98rem;
+    margin: 0px auto;
+    margin-top: 2.46rem;
+  }
+  .line1 {
+    height: 0.78rem;
+    border-bottom: 0.01rem solid #a3a3a3;
+    display: flex;
+  }
+  .text {
+    width: 1.02rem;
+    font-size: 0.28rem;
+    color: #333333;
+  }
+  .con {
+    flex: 1;
+    border: none;
+    font-size: 0.28rem;
+    margin-top: -0.4rem;
+    background: #fafafa;
+  }
+  .line2 {
+    margin-top: 0.56rem;
+  }
+  .forget {
+    font-size: 0.24rem;
+    color: #666;
+    text-align: right;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+  .btn {
+    width: 5.98rem;
+    height: 1rem;
+    background: #ff9900;
+    color: #fff;
+    font-size: 0.34rem;
+    text-align: center;
+    line-height: 1rem;
+    border-radius: 0.2rem;
+    margin: 0.4rem auto;
+  }

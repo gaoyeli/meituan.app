@@ -1,0 +1,66 @@
+.res{
+    width: 100vw;
+    
+}
+.header {
+    font-size: 0.38rem;
+    color: #fff;
+    height: 0.8rem;
+    background: #ff9900;
+    text-align: center;
+    line-height: 0.8rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .header span {
+    color: #fff;
+    font-size: 0.38rem;
+  }
+  .back {
+    position: absolute;
+    left: 0.3rem;
+  }
+  .input {
+    width: 5.98rem;
+    margin: 0rem auto;
+    margin-top: 2.46rem;
+  }
+  .line1 {
+    height: 0.5rem;
+    border-bottom: 0.01rem solid #ffffff;
+    display: flex;
+  }
+  .text {
+    width: 1.12rem;
+    font-size: 0.28rem;
+    color: #333333;
+  }
+  .con {
+    flex: 1;
+    border: none;
+    font-size: 0.35rem;
+    margin-top: -0.4rem;
+    background: #ffffff;
+
+  }
+  .line2 {
+    margin-top: 0.56rem;
+  }
+  .forget {
+    font-size: 0.24rem;
+    color: #666;
+    text-align: right;
+    margin-top: 0.44rem;
+    margin-bottom: 0.3rem;
+  }
+  .btn {
+    width: 5.98rem;
+    height: 1rem;
+    background: #ff9900;
+    color: #fff;
+    font-size: 0.34rem;
+    text-align: center;
+    line-height: 1rem;
+    border-radius: 0.2rem;
+    margin: 0.3rem auto;
+  }
