@@ -49,21 +49,21 @@ export default class Login extends Component {
                 </div>
                 {/* 输入框 */}
                 <div className="input">
-                    <div className="line1">
-                        <div className="text">手机号：</div>
-                        <input className="con" type="text" value={user.phone} onChange={(e) => this.changeUser(e, "phone")} />
+                    <div className="line11">
+                        <div className="cccc">手机号：</div>
+                        <input className="con11" type="text" value={user.phone} onChange={(e) => this.changeUser(e, "phone")} />
                     </div>
-                    <div className="line1 line2">
-                        <div className="text">昵 称：</div>
-                        <input className="con" type="text" value={user.nickname} onChange={(e) => this.changeUser(e, "nickname")} />
+                    <div className="line11 line21">
+                        <div className="cccc">昵 称：</div>
+                        <input className="con11" type="text" value={user.nickname} onChange={(e) => this.changeUser(e, "nickname")} />
                     </div>
-                    <div className="line1 line2">
-                        <div className="text">密 码：</div>
-                        <input className="con" type="text" value={user.password} onChange={(e) => this.changeUser(e, "password")} />
+                    <div className="line11 line21">
+                        <div className="cccc">密 码：</div>
+                        <input className="con11" type="text" value={user.password} onChange={(e) => this.changeUser(e, "password")} />
                     </div>
                 </div>
                 {/*  登录 */}
-                <div className="btn" onClick={() => this.login()}>注册</div>
+                <div className="btnb" onClick={() => this.login()}>注册</div>
 
 
 

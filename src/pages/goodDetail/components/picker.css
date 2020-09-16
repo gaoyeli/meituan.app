@@ -1,0 +1,61 @@
+
+.mask {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  .picker {
+    width: 100%;
+    padding: 0.3rem;
+    background: #ffffff;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+  }
+  .picker .info {
+    overflow: hidden;
+  }
+  .picker .info img {
+    width: 2rem;
+    height: 2rem;
+    float: left;
+    border-radius: 0.2rem;
+    margin-right: 0.3rem;
+  }
+  .picker .info span {
+    float: left;
+    line-height: 0.8rem;
+    font-size: 0.4rem;
+  }
+  .sku h3 {
+    font-size: 0.38rem;
+    line-height: 0.6rem;
+    color: #333;
+    margin-top: 0.3rem;
+  }
+  .attr {
+    overflow: hidden;
+  }
+  .attr span {
+    float: left;
+    padding: 0.2rem 0.3rem;
+    border: 0.02rem solid #666;
+    border-radius: 0.1rem;
+    margin: 0.2rem;
+    font-size: 0.3rem;
+  }
+  .attr .select {
+    color: #ff9900;
+    border-color: #ff9900;
+  }
+  .picker .btn {
+    position: static;
+    display: block;
+    margin: 0px auto;
+    font-size: 0.2rem;
+  
+  }

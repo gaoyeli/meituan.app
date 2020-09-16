@@ -1,15 +1,35 @@
 import React, { Component } from 'react'
- import "./cate.css"
-export default class cate extends Component {
-    
+import "./Cate.css"
+import { withRouter } from "react-router-dom"
+// import { reqgetDetail } from "../../../utils/request"
+
+class Cate extends Component {
+    constructor() {
+        super()
+        this.state={
+            detail:{}
+        }
+        
+    }
+    toDetail(id) {
+        this.props.history.push("/gooddetail/"+id)
+        // reqgetDetail(id).then(res => {
+        //     this.setState({
+               
+        //         detail:res.data.list[0]
+        //     })
+        //     this.props.history.push("/gooddetail/"+id)
+                   
+        // })
+    }
     render() {
-        const{cate}=this.props
+        const { goods } = this.props
         return (
             <div>
-                 {
-                    cate.map(item => {
+                {
+                    goods.map(item => {
                         return (
-                            <div className="index_list" key={item.id}>
+                            <div className="index_list" key={item.id} onClick={() => this.toDetail(item.id)} >
                                 <div className="index_goodsPic">
                                     <img src={item.img} alt="" />
                                 </div>
@@ -20,7 +40,7 @@ export default class cate extends Component {
                                         <span className='index_price index_color'>{item.price}</span>
                                     </p>
                                     <p className='index_buy'>
-                                        <button>立即抢购</button>
+                                        <button >立即抢购</button>
                                     </p>
                                 </div>
                             </div>
@@ -31,3 +51,5 @@ export default class cate extends Component {
         )
     }
 }
+
+export default withRouter(Cate)

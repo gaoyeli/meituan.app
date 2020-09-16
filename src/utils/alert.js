@@ -1,8 +1,13 @@
-import { Toast } from 'vant';
+import { Toast,Modal } from "antd-mobile"
 
-export const successAlert=msg=>{
-   Toast(msg)
+//弹框
+export const successAlert = msg => {
+    Toast.info(msg, 1)
 }
-export const errorAlert=msg=>{
-    Toast(msg)
+//确认弹框
+export const confirmAlert = (fn) => {
+    Modal.alert('提示', '你确定要删除吗？', [
+        { text: '取消', onPress: () => {}, style: 'default' },
+        { text: '确定', onPress: () => {fn()} },
+    ]);
 }

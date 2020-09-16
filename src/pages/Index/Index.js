@@ -1,86 +1,94 @@
 import React, { Component } from 'react'
 import "./Index.css"
-import aa from "../../assets/img/img/home/1.jpg"
-import ava from "../../assets/img/img/home/logo.jpg"
+
+import homes from "../../assets/img/tab_home_hig.png"
 import home from "../../assets/img/tab_home_nor.png"
+import fenleis from "../../assets/img/tab_menu_hig.png"
 import fenlei from "../../assets/img/tab_menu_nor.png"
-import che from "../../assets/img/tab_shopping_nor.png"
-import eo from "../../assets/img/tab_me_nor.png"
-import Banner from "./components/Banner"
-import { reqgetBanner, reqgetCate } from "../../utils/request"
-import Cate from "./components/cate"
+import shops from "../../assets/img/tab_shopping_hig.png"
+import shop from "../../assets/img/tab_shopping_nor.png"
+import mines from "../../assets/img/tab_me_hig.png"
+import mine from "../../assets/img/tab_me_nor.png"
+
+import Home from "../Home/Home"
+import Mine from "../Mine/Mine"
+import Shop from "../Shop/Shop"
+import FenLei from "../FenLei/FenLei"
+
+import { Switch, NavLink, Route, Redirect } from "react-router-dom"
 export default class Index extends Component {
     constructor() {
         super()
         this.state = {
-            banner: [],
-            cate: []
+            navs: [
+                {
+                    name: "首页",
+                    selected: homes,
+                    noSelected: home,
+                    path: "/index/home"
+                },
+                {
+                    name: "分类",
+                    selected: fenleis,
+                    noSelected: fenlei,
+                    path: "/index/fenlei"
+                },
+                {
+                    name: "购物车",
+                    selected: shops,
+                    noSelected: shop,
+                    path: "/index/shop"
+                },
+                {
+                    name: "我的",
+                    selected: mines,
+                    noSelected: mine,
+                    path: "/index/mine"
+                },
+
+            ]
         }
     }
-    componentDidMount() {
-        reqgetBanner().then(res => {
-            this.setState({
-                banner: res.data.list
-            })
-        })
-
-        reqgetCate().then(res => {
-            this.setState({
-                cate: res.data.list
-            })
-        })
-    }
     render() {
-
-        const { banner ,cate} = this.state
         return (
-            <div className="index">
-                <div className="index1">
-                    <div className="index11"><img src={ava} alt="" /></div>
-                    <div className="index2">寻找商品</div>
-                </div>
+            <div >
 
-                <div className="index3" >
+               
+
+                {/* 二级路由出口 */}
+                <Switch>
+
+                    <Route path="/index/home" component={Home}></Route>
+                    <Route path="/index/mine" component={Mine}></Route>
+                    <Route path="/index/shop" component={Shop}></Route>
+                    <Route path="/index/fenlei" component={FenLei}></Route>
+                    
+                  
+                    <Redirect to="/index/home"></Redirect>
+                </Switch>
+
+
+
+
+
+
+
+                {/* 底部导航带icon */}
+
+
+                <footer className="index-footer footer2">
                     {
-                        banner.length > 0 ? (<Banner banner={banner}></Banner>) : null
+                        this.state.navs.map(item => {
+                            return (
+                                <NavLink activeClassName="select" key={item.path} to={item.path}>
+                                    <img src={this.props.location.pathname === item.path ? item.selected : item.noSelected} alt="" />
+                                    <div>{item.name}</div>
+                                </NavLink>
+                            )
+                        })
                     }
-                </div>
 
-                <div className="index4">
-                    <div><img src={aa} alt="" />
-                        <p>限时抢购</p>
-                    </div>
-                    <div><img src={aa} alt="" />
-                        <p>积分商城</p></div>
-                    <div><img src={aa} alt="" />
-                        <p>联系我们</p></div>
-                    <div><img src={aa} alt="" />
-                        <p>商品分类</p></div>
-                </div>
-               <div>
-                    <Cate cate={cate}></Cate>
-               </div>
-
-                <div className="index6">
-                    <div className="index61">
-                        <img src={home} alt="" />
-                        <p>首页</p>
-                    </div>
-                    <div className="index61">
-                        <img src={fenlei} alt="" />
-                        <p>分类</p>
-                    </div>
-                    <div className="index61">
-                        <img src={che} alt="" />
-                        <p>购物车</p>
-                    </div>
-                    <div className="index61">
-                        <img src={eo} alt="" />
-                        <p>我的</p>
-                    </div>
-                </div>
-
-
+                </footer>
             </div>
         )
     }

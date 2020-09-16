@@ -1,0 +1,60 @@
+.page{
+    width: 100vw;
+    padding-top: 0.8rem;;
+}
+.header {
+  width: 100%;
+  font-size: 0.38rem;
+  color: #fff;
+  height: 0.8rem;
+  background: #ff9900;
+  text-align: center;
+  line-height: 0.8rem;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.header span {
+  color: #fff;
+  font-size: 0.38rem;
+}
+.back {
+  position: absolute;
+  left: 0.3rem;
+}
+.item {
+  display: flex;
+  padding: 0.2rem;
+}
+.list .item-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+}
+.list .item-con {
+  flex: 1;
+  margin-left: 0.3rem;
+}
+.item-con .goodsname {
+  font-size: 0.38rem;
+  color: #333;
+  line-height: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+.price {
+  color: #e23838;
+  font-size: 0.4rem;
+}
+.bbtn {
+    width: 1.5rem;
+   height: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  background: rgb(255, 153, 0);
+  color: #ffffff;
+  display: inline-block;
+  border-radius: 0.2rem;
+  line-height: 0.5rem;
+  font-size: 0.2rem;
+  text-align: center;
+}

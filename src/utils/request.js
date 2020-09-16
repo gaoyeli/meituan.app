@@ -2,8 +2,14 @@ import axios from "axios"
 import qs from "qs"
 const baseUrl = ""
 
+// 请求拦截
+  axios.interceptors.request.use(config => {
+    config.headers.authorization = sessionStorage.getItem('token')
+    return config;
+})
+
 //响应拦截
-axios.interceptors.response.use(res => {
+  axios.interceptors.response.use(res => {
     console.group("====本次请求的地址是：" + res.config.url + "======");
     console.log(res);
     console.groupEnd()
@@ -27,10 +33,26 @@ export const reqlogin = (data) => axios({
     data: qs.stringify(data)
 })
 
-//首页分类
+
+//首页 分类分类信息
 export const reqgetCate = () => axios({
-    url: baseUrl + "/api/getcatetree"
+    method: "get",
+    url: baseUrl + "/api/getcate"
 })
+
+//首页，分类右边树形结构
+export const reqgetCateTree = () => axios({
+    url: baseUrl + "/api/getcatetree",
+    type: "get"
+})
+
+//分类列表 详情
+export const reqgetCateList = (params) => axios({
+    url: baseUrl + "/api/getgoods",
+    method: "get",
+    params
+})
+
 
 //轮播
 export const reqgetBanner = () => axios({
@@ -62,33 +84,23 @@ export const reqaddShop = (data) => axios({
     data: qs.stringify(data)
 })
 
-//分类列表
-export const reqgetCateList = (id) => axios({
-    url: baseUrl + "/api/getgoods",
-    params: {
-        fid: id
-    }
-})
+
 
 // 购物车列表
-export const reqshopList = (id) => axios({
+export const reqShopList = (params) => axios({
     url: baseUrl + "/api/cartlist",
-    params: {
-        uid: id
-    }
+    params:params
 })
 
 
 // 购物车删除
-export const reqshopDel = (id) => axios({
+export const reqShopDel = (id) => axios({
     url: baseUrl + "/api/cartdelete",
     method: "post",
-    data: qs.stringify({
-        id: id
-    })
+    data: qs.stringify(id)
 })
 // 购物车修改
-export const reqshopEdit = (data) => axios({
+export const reqShopEdit = (data) => axios({
     url: baseUrl + "/api/cartedit",
     method: "post",
     data: qs.stringify(data)

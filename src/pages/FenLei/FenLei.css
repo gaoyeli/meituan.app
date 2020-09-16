@@ -1,0 +1,69 @@
+.header {
+    font-size: 0.4rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color: #ffffff;
+    text-align: center;
+    background: rgb(255, 153, 0);
+  }
+  
+  .mainn {
+    display: flex;
+  }
+  
+  .leftw {
+    width: 2.34rem;
+    background: rgb(250, 250, 250);
+    margin-top: 1rem;
+  }
+  
+  .nvv {
+    font-size: 0.28rem;
+    height: 0.93rem;
+    text-align: center;
+    line-height: 0.93rem;
+    border-left: 0.1rem solid rgb(250, 250, 250);
+  }
+  
+  .nvv-select {
+    border-left: 0.1rem solid pink;
+    background: #ffffff;
+    color: rgb(255, 153, 0);
+  }
+  
+  .rightt {
+    margin-top: 0.8rem;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .everyy {
+    width: 2.2rem;
+    height: 2.3rem;
+    float: left;
+    border: 0.02rem solid rgb(29, 132, 167);
+    border-radius: 0.2rem;
+    margin-left: 0.1rem;
+    margin-top: 0.24rem;
+    position: relative;
+    /* 超出隐藏 */
+    overflow: hidden;
+  }
+  
+ .everyy img{
+     width: 2.2rem;
+     height: 2.2rem;
+ }
+  
+  .ccwy {
+    height: 0.48rem;
+    width: 2.2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(29, 132, 167);
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.48rem;
+    font-size: 0.23rem;
+  }

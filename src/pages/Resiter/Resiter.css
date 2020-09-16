@@ -25,25 +25,25 @@
     margin: 0rem auto;
     margin-top: 2.46rem;
   }
-  .line1 {
+  .line11 {
     height: 0.5rem;
-    border-bottom: 0.01rem solid #ffffff;
+    border-bottom: 0.01rem solid #9b9797 ;
     display: flex;
   }
-  .text {
+  .cccc {
     width: 1.12rem;
     font-size: 0.28rem;
     color: #333333;
   }
-  .con {
+  .con11 {
     flex: 1;
     border: none;
     font-size: 0.35rem;
     margin-top: -0.4rem;
-    background: #ffffff;
+    background: #fcf8f8;
 
   }
-  .line2 {
+  .line21 {
     margin-top: 0.56rem;
   }
   .forget {
@@ -53,7 +53,7 @@
     margin-top: 0.44rem;
     margin-bottom: 0.3rem;
   }
-  .btn {
+  .btnb {
     width: 5.98rem;
     height: 1rem;
     background: #ff9900;
